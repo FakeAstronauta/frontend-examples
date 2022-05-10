@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- esto es para las fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <!-- este es para las flechas -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- el link para el css se coloca al final para que sobreescriba los estilos de google fonts -->
+    <link rel="stylesheet" href="fancy-carousel.css">
+</head>
+<body>
+    <!-- 
+    El carrusel no tiene sentido en un móvil, por lo que recomiendo reemplazarlo por una imagen estática
+    -->
+
+    <div class="gallery">
+        <div class="gallery-container">
+            <div class="gallery-item gallery-item-1">
+                <img src='../../common-use-images/vertical/pexels-megan-ruth-11494641.jpg'>
+            </div>
+            <div class="gallery-item gallery-item-2">
+                <img src='../../common-use-images/vertical/pexels-anna-rye-11485306.jpg'>
+            </div>
+            <div class="gallery-item gallery-item-3">
+                <img src='../../common-use-images/vertical/pexels-gaspar-zaldo-11163068.jpg'>
+            </div>
+            <div class="gallery-item gallery-item-4">
+                <img src='../../common-use-images/vertical/pexels-nikolina-11724579.jpg'>
+            </div>
+            <div class="gallery-item gallery-item-5">
+                <img src='../../common-use-images/vertical/pexels-selim-şendal-11537421.jpg'>
+            </div>
+            <div class="gallery-item gallery-item-6">
+                <img src='../../common-use-images/vertical/pexels-sies-studio-11674625.jpg'>
+            </div>
+            <div class="gallery-item gallery-item-7">
+                <img src='../../common-use-images/vertical/pexels-yana-moroz-11713102.jpg'>
+            </div>
+            <!-- los botones de navegación -->
+            <div id='navigators-container'>
+                <span class="gallery-control-prev material-icons">navigate_before</span>
+                <span class="gallery-control-next material-icons">navigate_next</span>
+            </div>
+        </div>
+        <div id='carousel-footer-container'>
+            <div class='carousel-footer'></div>
+        </div>
+    </div>
+    <script src="fancy-carousel.js"></script>
+
+</body>
+</html>

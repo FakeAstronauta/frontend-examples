@@ -1,0 +1,114 @@
+body{
+    margin: 0px;
+}
+
+.gallery {
+    position: relative;
+    width: 100%;
+}
+
+.gallery-container {
+    align-items: center;
+    display: flex;
+    height: 39vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+
+}
+
+.gallery-item {
+    position: absolute;
+    transition: transform 1s;
+    width: 18vw;
+    z-index: 0;
+}
+
+/* this stylize images */
+.gallery-item > img{
+    height: 28vw;
+    /* este valor permite recortar una imagen */
+    object-fit: cover;
+    transition: transform .7s;  
+    width: 18vw;
+}
+
+/* cada elemento del carrusel es desplazado */
+.gallery-item-1 {
+    transform: translateX(-19.6vw);
+}
+
+.gallery-item-2 {
+    transform: translateX(0vw);
+}
+
+.gallery-item-3 {
+    transform: translateX(19.6vw);
+}
+
+.gallery-item-4 {
+    transform-origin: center;
+    /* 41vw es el resultado de sumar el tamaño escalado */
+    transform:  translateX(41vw) scale(1.2);
+}
+
+.gallery-item-5 {
+    transform: translateX(62.4vw);
+}
+
+.gallery-item-6 {
+    transform: translateX(82vw);
+}
+
+.gallery-item-7 {
+    transform: translateX(100.6vw);
+}
+
+/* styles for the buttons */
+#navigators-container{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gallery-control-prev, .gallery-control-next{
+    background: radial-gradient(circle, rgb(255, 255, 255, 0.6) 30%, rgba(90,61,61,0) 55%);
+    color: rgb(71, 71, 71);
+    cursor: pointer;
+    font-size: 7vw;
+    font-weight: 300;
+    z-index: 0;
+}
+
+#carousel-footer-container{
+    align-items: center;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(226,226,226,0) 100%);
+    bottom: 0vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 3vw;
+    position: absolute;
+    padding: 5vw 0 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* el efecto se logra reduciento la opacidad a cero en la mitad de la animación para luego
+   incrementarla
+*/
+@-webkit-keyframes fadeinout {
+    50% { opacity: 0; }   
+    100% { opacity: 1; }
+}
+
+/*las propiedades del texto  */
+.carousel-footer{
+    font-size: 2.9vw;
+    font-family: 'Poiret One', serif;
+    width: 30vw;
+}

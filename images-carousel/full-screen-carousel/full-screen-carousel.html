@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="full-screen-carousel.css">
+    
+</head>
+<body>
+    <header id='header'> 
+        <!-- <div id='overlay_gradient'></div> -->
+        <div id="container">
+            <div id="first" class="abs elem-1 gallery-item-1">
+                <div class="shell">
+                    <div class="shell-text">
+                        <div class='text-group-two'>
+                            <p class="big">Harum sint quis in vitae reiciendis</p>
+                            <p class="medium">Est consectetur aut cupiditate nam ipsa</p>
+                            <p class="small">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+                            <div class="button-inside">Lorem ipsum</div>
+                        </div>
+                    </div>
+                    <div class="surround">
+                    </div>
+                    <img src="../../common-use-images/horizontal/header_1.png">
+                </div>
+            </div>
+            
+            <!-- ===================== -->
+            <div id="second" class="abs elem-2 gallery-item-2">
+                <div class=" shell">
+                    <div class="shell-text">
+                        <div class='text-group-two'>
+                            <p class="big">Harum sint quis in vitae reiciendis</p>
+                            <p class="medium">Est consectetur aut cupiditate nam ipsa</p>
+                            <p class="small">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+                            <div class="button-inside">Lorem ipsum</div>
+                        </div>
+                    </div>
+                    <div class="surround">
+                    </div>
+                    <img src="../../common-use-images/horizontal/header_2.png">
+                </div>
+            </div>
+
+            <!-- ===================== -->
+            <div id="third" class="abs elem-3 gallery-item-3">
+                <div class=" shell">
+                    <div class="shell-text">
+                        <div class='text-group-two'>
+                            <p class="big">Harum sint quis in vitae reiciendis</p>
+                            <p class="medium">Est consectetur aut cupiditate nam ipsa</p>
+                            <p class="small">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+                            <div class="button-inside">Lorem ipsum</div>
+                        </div>
+                    </div>
+                    <div class="surround">
+                    </div>
+                    <img src="../../common-use-images/horizontal/header_3.png">
+                    </div>
+                </div>
+            </div>
+            <!-- ===================== -->
+        </div>
+
+        <div id="prevBtn">
+            <div class="prev">&#10094</div>
+        </div>
+        <div id="nextBtn">
+            <div class="next">&#10095</div>
+        </div>
+
+        <div class="dots">
+            <span class="btn-play-pause material-icons" onmousedown="change_button(event, 1)" onmouseup="change_button(event, 1)">
+                pause_circle
+            </span>
+            <span class="btn-play-pause material-icons" style="display: none;" onmousedown="change_button(event, 0)" onmouseup="change_button(event, 0)">
+                play_circle
+            </span>
+            <span class="dot" onclick="moveEachOne(1)"></span>
+            <span class="dot" onclick="moveEachOne(2)"></span>
+            <span class="dot" onclick="moveEachOne(3)"></span>
+        </div>
+
+
+    </header>
+    <script src="full-screen-carousel.js"></script>
+</body>
+</html>

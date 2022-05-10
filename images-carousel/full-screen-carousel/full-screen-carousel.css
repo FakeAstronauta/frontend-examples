@@ -1,0 +1,217 @@
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    min-height: 339px;
+    max-height: 338px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#container{
+    display: flex;
+    height: 200px;
+    position: relative;
+}
+
+.abs{
+    transition: transform 0.3s;
+    position: absolute;
+}
+
+.shell{
+    /* this avoid a white space under the image*/
+    display: flex;
+    /* overflow: hidden; */
+    position: relative;
+    width: 100%;
+}
+
+.shell img{
+    height: 70vh;
+    object-fit: cover;
+    width: 100vw;
+}
+
+.shell-text{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* gradient container */
+.surround{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0.3) 60%);
+    height: 100%;
+    /* para que cubra todo */
+    position: absolute;
+    width: 100%;
+}
+
+/* Text styles */
+
+.text-group-two{
+    font-family: 'Open Sans', sans-serif;
+    height: auto;
+    max-width: 880px;
+    width: 80vw;
+}
+
+.big{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 0px;
+    margin: 30px 0 22px 0;
+    text-align: left;
+}
+
+.medium{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 50%;
+    margin: 0;
+    text-align: left;
+}
+
+.small{
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 80%;
+    text-align: left;
+}
+
+/* Button style */
+
+.button-inside{
+    background-color: #de0108;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    transition: 0.3s;
+    margin-top: 17px;
+    padding: 10px 20px 10px 20px; 
+    width: max-content;
+    z-index: 1;
+}
+
+.button-inside:hover{
+    background-color: #9b0005;
+}
+
+/* Navigation dots */
+.dots{
+    align-items: center;
+    border: 1.5px solid white;
+    border-radius: 18px;
+    display: flex;
+    height: 28px;
+    justify-content: space-between;
+    left: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    z-index: 1;
+}
+
+.dot{
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 50px;
+    border: 1.5px solid white;
+    display: inline-block;
+    height: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 5px;
+}
+
+.active, .dot:hover{
+    background-color: rgba(255, 255, 255, 0.747);
+}
+
+/* navigation buttons */
+
+#prevBtn, #nextBtn{
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+    color:white;
+    display: flex;
+    font-size: 15px;
+    height: 18px;
+    justify-content: center;
+    position: absolute;
+    top: 130px;
+    width: 18px;
+    z-index: 1;
+}
+
+#prevBtn{
+    left: 20px;
+}
+
+#nextBtn{
+    right: 20px;
+}
+
+.prev{
+    font-size: 11px;
+}
+
+.next{
+    font-size: 11px;
+}
+
+#prevBtn:hover, #nextBtn:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn-play-pause{
+    color: #ffffff;
+    height: 26px;
+    margin: 3px 2px 0 0 ;
+    width: auto;
+}
+
+/* las clases que rotan */
+
+.gallery-item-1 {
+    transform: translateX(-100vw);
+}
+
+.gallery-item-2 {
+    transform: translateX(0vw);
+}
+
+.gallery-item-3 {
+    transform: translateX(100vw);
+}
+
+
+@media only screen and (max-width: 1024px){
+    .shell img{height: 400px;}
+    #prevBtn, #nextBtn{display: none;}
+    .big{font-size: 21px; line-height: 130%; margin: 15px; text-align: center; }
+    .medium{font-size: 12px; line-height: 130%; margin: 15px; text-align: center; }
+    .small{display: none;}
+    .button-inside{margin: auto; margin-top: 20px;}
+    .text-group{margin-top: 50px;}
+} 
+
