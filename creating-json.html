@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let valorConSplit =
+        "PROCESO FINALIZADO EXITOSAMENTE|12345LuisVelasquez|00012EnglbertoNajarro";
+      let valorRespuesta;
+      valorRespuesta = valorConSplit.split("|");
+
+      var list = '{"datos2":[';
+
+      valorRespuesta.forEach(function (n) {
+        list +=
+          '{"id":' +
+          '"' +
+          n.substring(0, 5) +
+          '"' +
+          ", " +
+          '"name":' +
+          '"' +
+          n.substring(5, 23) +
+          '"' +
+          "},";
+      });
+
+      let sliced = list.slice(0, -1);
+      sliced += "]}";
+
+      console.log(JSON.parse(sliced));
+
+ 
+// =====================
+    var sammy = { datos:[]};
+
+    valorRespuesta.forEach(function (n) {
+        let curly = {};
+        curly['id'] = n.substring(0, 5);
+        curly['name'] = n.substring(5, 23);
+        sammy.datos.push(curly)
+    });
+    
+    console.log(sammy);
+    </script>
+  </body>
+</html>

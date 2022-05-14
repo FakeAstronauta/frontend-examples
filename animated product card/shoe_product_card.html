@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card">
+            <div class="imgBox">
+                <img class="img" id="img" src="images/green.png">
+            </div>
+            <span class="circle" id="circle"></span>
+            <div class="contentBx">
+                <h2>Nike Shoes</h2>
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="color">
+                    <h3>Color :</h3>
+                    <span onclick="changeShoe('images/green.png'); changeColor('#9bdc28')"></span>
+                    <span onclick="changeShoe('images/blue.png'); changeColor('#03a9f4')"></span>
+                    <span onclick="changeShoe('images/black.png'); changeColor('#000000')"></span>
+                </div>
+                <a href="#">Buy now</a>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeShoe(shoeModel){
+            document.getElementById("img").src = shoeModel;
+        }
+
+        function changeColor(color){
+            document.getElementById("circle").style.background = color;
+        }
+    </script>
+</body>
+</html>

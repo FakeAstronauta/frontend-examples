@@ -156,11 +156,6 @@ function startCarousel() {
     }, 7000);
 }
 
-let header =  document.querySelector('#header')
-window.onresize = () => {
-    title.innerHTML = window.innerWidth;
-}
-    
 
 // acá inicia todo
 startCarousel(); 

@@ -62,7 +62,7 @@ prev.addEventListener('click', () => {
   if (bool != true) {
 
     carouselArray[0].style.transition = 'transform 1s';
-    carouselArray[carouselArray.length].style.transition = 'none';
+    carouselArray[carouselArray.length - 1 ].style.transition = 'none';
 
     setCurrentState(prev);
     changeFooter(-1)
@@ -73,7 +73,7 @@ next.addEventListener('click', () => {
   if (bool != true) {
 
     carouselArray[0].style.transition = 'none';
-    carouselArray[carouselArray.length].style.transition = 'transform 1s';
+    carouselArray[carouselArray.length - 1].style.transition = 'transform 1s';
 
     setCurrentState(next);
     changeFooter(1)
